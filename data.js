@@ -18,67 +18,67 @@ const ZONE_DATA = {
     },
     5: {
         name: "Wild Zone 5",
-        pokemon: ["Bellsprout", "Whirlipede", "Pansage", "Pansear", "Panpour", "Stunfisk", "Trubbish"]
+        pokemon: ["Pidgeotto", "Venipede", "Electrike", "Bellsprout", "Abra", "Pidgey", "Bunnelby"]
     },
     6: {
         name: "Wild Zone 6",
-        pokemon: ["Houndour", "Meditite", "Binacle", "Bergmite", "Pikachu", "Magikarp", "Electrike"]
+        pokemon: ["Binacle", "Meditite", "Buneary", "Magikarp", "Houndour", "Swablu", "Flaaffy"]
     },
     7: {
         name: "Wild Zone 7",
-        pokemon: ["Fletchling", "Hippopotas", "Shuppet", "Minccino", "Skorupi", "Sandile", "Buneary"]
+        pokemon: ["Hippopotas", "Audino", "Vanillite", "Kakuna", "Floette", "Roselia", "Shuppet"]
     },
     8: {
         name: "Wild Zone 8",
-        pokemon: ["Vanillite", "Krokorok", "Drilbur", "Numel", "Camerupt", "Sandile"]
+        pokemon: ["Machop", "Numel", "Gible", "Drilbur", "Sandile", "Krokorok"]
     },
     9: {
         name: "Wild Zone 9",
-        pokemon: ["Espurr", "Meowstic", "Manectric", "Electrike", "Dedenne", "Emolga"]
+        pokemon: ["Carbink", "Espurr", "Fletchinder", "Kadabra", "Sableye", "Mawile"]
     },
     10: {
         name: "Wild Zone 10",
-        pokemon: ["Murkrow", "Hoothoot", "Woobat", "Noibat", "Fletchinder", "Tranquill", "Pidgeotto"]
+        pokemon: ["Slowpoke", "Arbok", "Watchog", "Bellsprout", "Carvanha", "Staryu", "Tynamo"]
     },
     11: {
         name: "Wild Zone 11",
-        pokemon: ["Poliwag", "Basculin", "Froakie", "Slowpoke", "Carvanha", "Tynamo"]
+        pokemon: ["Gyarados", "Clauncher", "Furfrou", "Inkay", "Slowpoke", "Stunfisk"]
     },
     12: {
         name: "Wild Zone 12",
-        pokemon: ["Vanillite", "Sneasel", "Delibird", "Swinub", "Snover", "Bergmite", "Snorunt", "Machoke"]
+        pokemon: ["Delibird", "Machop", "Snover", "Bergmite", "Vanillite", "Gogoat", "Snorunt", "Machoke"]
     },
     13: {
         name: "Wild Zone 13",
-        pokemon: ["Weepinbell", "Vivillon", "Scyther", "Phantump", "Roselia", "Pinsir"]
+        pokemon: ["Phantump", "Vivillon", "Heracross", "Pinsir", "Weepinbell", "Scyther"]
     },
     14: {
         name: "Wild Zone 14",
-        pokemon: ["Helioptile", "Magnemite", "Voltorb", "Shinx", "Pikachu", "Joltik", "Emolga"]
+        pokemon: ["Helioptile", "Drilbur", "Onix", "Aron", "Lairon", "Excadrill", "Emolga"]
     },
     15: {
         name: "Wild Zone 15",
-        pokemon: ["Gastly", "Misdreavus", "Duskull", "Litwick", "Phantump", "Pumpkaboo", "Honedge"]
+        pokemon: ["Pumpkaboo", "Shuppet", "Scolipede", "Haunter", "Whirlipede", "Beedrill", "Larvitar"]
     },
     16: {
         name: "Wild Zone 16",
-        pokemon: ["Ralts", "Riolu", "Machop", "Meditite", "Hawlucha", "Falinks", "Froakie"]
+        pokemon: ["Falinks", "Flaaffy", "Starmie", "Barbaracle", "Medicham", "Florges", "Froakie"]
     },
     17: {
         name: "Wild Zone 17",
-        pokemon: ["Munchlax", "Swirlix", "Slurpuff", "Spritzee", "Aromatisse", "Klefki"]
+        pokemon: ["Klefki", "Lampent", "Skarmory", "Pyroar", "Diggersby", "Chespin"]
     },
     18: {
         name: "Wild Zone 18",
-        pokemon: ["Dratini", "Goomy", "Axew", "Deino", "Bagon", "Swablu", "Noibat", "Buneary"]
+        pokemon: ["Noibat", "Fennekin", "Bagon", "Altaria", "Noivern", "Swablu"]
     },
     19: {
         name: "Wild Zone 19",
-        pokemon: ["Cleffa", "Clefairy", "Togepi", "Togetic", "Drampa", "Swablu", "Audino"]
+        pokemon: ["Eevee", "Furfrou", "Drampa", "Kangaskhan", "Audino", "Cleffa", "Clefairy"]
     },
     20: {
         name: "Wild Zone 20",
-        pokemon: ["Chespin", "Fennekin", "Froakie", "Bulbasaur", "Charmander", "Squirtle", "Chikorita", "Tepig", "Totodile", "Roserade", "Hippowdon", "Gardevoir", "Aggron", "Scrafty", "Garbodor"]
+        pokemon: ["Malamar", "Dragalge", "Charmander", "Tepig", "Lucario", "Hippowdon", "Squirtle", "Totodile", "Bulbasaur", "Roserade", "Gardevoir", "Chikorita", "Aggron", "Scrafty", "Garbodor"]
     }
 };
 
