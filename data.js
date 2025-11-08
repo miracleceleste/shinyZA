@@ -1,0 +1,206 @@
+// Zone data with Pokemon spawns - Complete accurate data
+const ZONE_DATA = {
+    1: {
+        name: "Wild Zone 1",
+        pokemon: ["Fletchling", "Bunnelby", "Weedle", "Scatterbug", "Mareep", "Pidgey", "Pichu"]
+    },
+    2: {
+        name: "Wild Zone 2",
+        pokemon: ["Kakuna", "Patrat", "Binacle", "Staryu", "Magikarp", "Budew"]
+    },
+    3: {
+        name: "Wild Zone 3",
+        pokemon: ["Pancham", "Espurr", "Pikachu", "Litleo", "Skiddo", "Flabébé"]
+    },
+    4: {
+        name: "Wild Zone 4",
+        pokemon: ["Gastly", "Spinarak", "Spewpa", "Honedge", "Patrat", "Ekans"]
+    },
+    5: {
+        name: "Wild Zone 5",
+        pokemon: ["Bellsprout", "Whirlipede", "Pansage", "Pansear", "Panpour", "Stunfisk", "Trubbish"]
+    },
+    6: {
+        name: "Wild Zone 6",
+        pokemon: ["Houndour", "Meditite", "Binacle", "Bergmite", "Pikachu", "Magikarp", "Electrike"]
+    },
+    7: {
+        name: "Wild Zone 7",
+        pokemon: ["Fletchling", "Hippopotas", "Shuppet", "Minccino", "Skorupi", "Sandile", "Buneary"]
+    },
+    8: {
+        name: "Wild Zone 8",
+        pokemon: ["Vanillite", "Krokorok", "Drilbur", "Numel", "Camerupt", "Sandile"]
+    },
+    9: {
+        name: "Wild Zone 9",
+        pokemon: ["Espurr", "Meowstic", "Manectric", "Electrike", "Dedenne", "Emolga"]
+    },
+    10: {
+        name: "Wild Zone 10",
+        pokemon: ["Murkrow", "Hoothoot", "Woobat", "Noibat", "Fletchinder", "Tranquill", "Pidgeotto"]
+    },
+    11: {
+        name: "Wild Zone 11",
+        pokemon: ["Poliwag", "Basculin", "Froakie", "Slowpoke", "Carvanha", "Tynamo"]
+    },
+    12: {
+        name: "Wild Zone 12",
+        pokemon: ["Vanillite", "Sneasel", "Delibird", "Swinub", "Snover", "Bergmite", "Snorunt", "Machoke"]
+    },
+    13: {
+        name: "Wild Zone 13",
+        pokemon: ["Weepinbell", "Vivillon", "Scyther", "Phantump", "Roselia", "Pinsir"]
+    },
+    14: {
+        name: "Wild Zone 14",
+        pokemon: ["Helioptile", "Magnemite", "Voltorb", "Shinx", "Pikachu", "Joltik", "Emolga"]
+    },
+    15: {
+        name: "Wild Zone 15",
+        pokemon: ["Gastly", "Misdreavus", "Duskull", "Litwick", "Phantump", "Pumpkaboo", "Honedge"]
+    },
+    16: {
+        name: "Wild Zone 16",
+        pokemon: ["Ralts", "Riolu", "Machop", "Meditite", "Hawlucha", "Falinks", "Froakie"]
+    },
+    17: {
+        name: "Wild Zone 17",
+        pokemon: ["Munchlax", "Swirlix", "Slurpuff", "Spritzee", "Aromatisse", "Klefki"]
+    },
+    18: {
+        name: "Wild Zone 18",
+        pokemon: ["Dratini", "Goomy", "Axew", "Deino", "Bagon", "Swablu", "Noibat", "Buneary"]
+    },
+    19: {
+        name: "Wild Zone 19",
+        pokemon: ["Cleffa", "Clefairy", "Togepi", "Togetic", "Drampa", "Swablu", "Audino"]
+    },
+    20: {
+        name: "Wild Zone 20",
+        pokemon: ["Chespin", "Fennekin", "Froakie", "Bulbasaur", "Charmander", "Squirtle", "Chikorita", "Tepig", "Totodile", "Roserade", "Hippowdon", "Gardevoir", "Aggron", "Scrafty", "Garbodor"]
+    }
+};
+
+// Complete Pokedex data - All 230 Pokemon in Legends Z-A (Lumiose Dex order)
+const POKEDEX_DATA = {
+    1: "Chikorita", 2: "Bayleef", 3: "Meganium",
+    4: "Tepig", 5: "Pignite", 6: "Emboar",
+    7: "Totodile", 8: "Croconaw", 9: "Feraligatr",
+    10: "Fletchling", 11: "Fletchinder", 12: "Talonflame",
+    13: "Bunnelby", 14: "Diggersby",
+    15: "Scatterbug", 16: "Spewpa", 17: "Vivillon",
+    18: "Weedle", 19: "Kakuna", 20: "Beedrill",
+    21: "Pidgey", 22: "Pidgeotto", 23: "Pidgeot",
+    24: "Mareep", 25: "Flaaffy", 26: "Ampharos",
+    27: "Patrat", 28: "Watchog",
+    29: "Budew", 30: "Roselia", 31: "Roserade",
+    32: "Magikarp", 33: "Gyarados",
+    34: "Binacle", 35: "Barbaracle",
+    36: "Staryu", 37: "Starmie",
+    38: "Flabébé", 39: "Floette", 40: "Florges",
+    41: "Skiddo", 42: "Gogoat",
+    43: "Espurr", 44: "Meowstic",
+    45: "Litleo", 46: "Pyroar",
+    47: "Pancham", 48: "Pangoro",
+    49: "Trubbish", 50: "Garbodor",
+    51: "Dedenne",
+    52: "Pichu", 53: "Pikachu", 54: "Raichu",
+    55: "Cleffa", 56: "Clefairy", 57: "Clefable",
+    58: "Spinarak", 59: "Ariados",
+    60: "Ekans", 61: "Arbok",
+    62: "Abra", 63: "Kadabra", 64: "Alakazam",
+    65: "Gastly", 66: "Haunter", 67: "Gengar",
+    68: "Venipede", 69: "Whirlipede", 70: "Scolipede",
+    71: "Honedge", 72: "Doublade", 73: "Aegislash",
+    74: "Bellsprout", 75: "Weepinbell", 76: "Victreebel",
+    77: "Pansage", 78: "Simisage",
+    79: "Pansear", 80: "Simisear",
+    81: "Panpour", 82: "Simipour",
+    83: "Meditite", 84: "Medicham",
+    85: "Electrike", 86: "Manectric",
+    87: "Ralts", 88: "Kirlia", 89: "Gardevoir", 90: "Gallade",
+    91: "Houndour", 92: "Houndoom",
+    93: "Swablu", 94: "Altaria",
+    95: "Audino",
+    96: "Spritzee", 97: "Aromatisse",
+    98: "Swirlix", 99: "Slurpuff",
+    100: "Eevee", 101: "Vaporeon", 102: "Jolteon", 103: "Flareon", 
+    104: "Espeon", 105: "Umbreon", 106: "Leafeon", 107: "Glaceon", 108: "Sylveon",
+    109: "Buneary", 110: "Lopunny",
+    111: "Shuppet", 112: "Banette",
+    113: "Vanillite", 114: "Vanillish", 115: "Vanilluxe",
+    116: "Numel", 117: "Camerupt",
+    118: "Hippopotas", 119: "Hippowdon",
+    120: "Drilbur", 121: "Excadrill",
+    122: "Sandile", 123: "Krokorok", 124: "Krookodile",
+    125: "Machop", 126: "Machoke", 127: "Machamp",
+    128: "Gible", 129: "Gabite", 130: "Garchomp",
+    131: "Carbink",
+    132: "Sableye",
+    133: "Mawile",
+    134: "Absol",
+    135: "Riolu", 136: "Lucario",
+    137: "Slowpoke", 138: "Slowbro", 139: "Slowking",
+    140: "Carvanha", 141: "Sharpedo",
+    142: "Tynamo", 143: "Eelektrik", 144: "Eelektross",
+    145: "Dratini", 146: "Dragonair", 147: "Dragonite",
+    148: "Bulbasaur", 149: "Ivysaur", 150: "Venusaur",
+    151: "Charmander", 152: "Charmeleon", 153: "Charizard",
+    154: "Squirtle", 155: "Wartortle", 156: "Blastoise",
+    157: "Stunfisk",
+    158: "Furfrou",
+    159: "Inkay", 160: "Malamar",
+    161: "Skrelp", 162: "Dragalge",
+    163: "Clauncher", 164: "Clawitzer",
+    165: "Goomy", 166: "Sliggoo", 167: "Goodra",
+    168: "Delibird",
+    169: "Snorunt", 170: "Glalie", 171: "Froslass",
+    172: "Snover", 173: "Abomasnow",
+    174: "Bergmite", 175: "Avalugg",
+    176: "Scyther", 177: "Scizor",
+    178: "Pinsir",
+    179: "Heracross",
+    180: "Emolga",
+    181: "Hawlucha",
+    182: "Phantump", 183: "Trevenant",
+    184: "Scraggy", 185: "Scrafty",
+    186: "Noibat", 187: "Noivern",
+    188: "Klefki",
+    189: "Litwick", 190: "Lampent", 191: "Chandelure",
+    192: "Aerodactyl",
+    193: "Tyrunt", 194: "Tyrantrum",
+    195: "Amaura", 196: "Aurorus",
+    197: "Onix", 198: "Steelix",
+    199: "Aron", 200: "Lairon", 201: "Aggron",
+    202: "Helioptile", 203: "Heliolisk",
+    204: "Pumpkaboo", 205: "Gourgeist",
+    206: "Larvitar", 207: "Pupitar", 208: "Tyranitar",
+    209: "Froakie", 210: "Frogadier", 211: "Greninja",
+    212: "Falinks",
+    213: "Chespin", 214: "Quilladin", 215: "Chesnaught",
+    216: "Skarmory",
+    217: "Fennekin", 218: "Braixen", 219: "Delphox",
+    220: "Bagon", 221: "Shelgon", 222: "Salamence",
+    223: "Kangaskhan",
+    224: "Drampa",
+    225: "Beldum", 226: "Metang", 227: "Metagross",
+    228: "Xerneas",
+    229: "Yveltal",
+    230: "Zygarde"
+};
+
+// Shiny odds
+const ODDS = {
+    base: 4096,
+    shinyCharm: 1024
+};
+
+// Hunting methods
+const HUNTING_METHODS = [
+    "Fast Travel",
+    "Bench Reset",
+    "Door Method",
+    "Despawn Running",
+    "Random Encounter"
+];

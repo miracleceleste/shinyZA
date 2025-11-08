@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legends Z-A Shiny Tracker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <button class="nav-btn active" data-page="map">Map</button>
+        <button class="nav-btn" data-page="hunts">Hunts</button>
+        <button class="nav-btn" data-page="pokedex">Pokédex</button>
+        <button class="nav-btn" data-page="settings">Settings</button>
+    </nav>
+
+    <!-- Map Page -->
+    <div id="map-page" class="page active">
+        <div class="page-header">
+            <h1>Wild Zone Map</h1>
+            <p class="subtitle">Tap a zone to start hunting</p>
+        </div>
+        <div class="map-container">
+            <div class="zone-map-wrapper">
+                <img src="Images/lumiose-map.jpg" alt="Lumiose City Map" class="lumiose-map">
+                <!-- Zone markers overlaid on map -->
+                <div class="zone-marker" data-zone="1" style="top: 92%; left: 58%;">1</div>
+                <div class="zone-marker" data-zone="2" style="top: 67%; left: 62.5%;">2</div>
+                <div class="zone-marker" data-zone="3" style="top: 27%; left: 50%;">3</div>
+                <div class="zone-marker" data-zone="4" style="top: 13.5%; left: 57.5%;">4</div>
+                <div class="zone-marker" data-zone="5" style="top: 60%; left: 41%;">5</div>
+                <div class="zone-marker" data-zone="6" style="top: 53%; left: 93%;">6</div>
+                <div class="zone-marker" data-zone="7" style="top: 43%; left: 28.5%;">7</div>
+                <div class="zone-marker" data-zone="8" style="top: 42.5%; left: 72%;">8</div>
+                <div class="zone-marker" data-zone="9" style="top: 55%; left: 12%;">9</div>
+                <div class="zone-marker" data-zone="10" style="top: 66%; left: 16%;">10</div>
+                <div class="zone-marker" data-zone="11" style="top: 60%; left: 82%;">11</div>
+                <div class="zone-marker" data-zone="12" style="top: 82%; left: 43%;">12</div>
+                <div class="zone-marker" data-zone="13" style="top: 5%; left: 42%;">13</div>
+                <div class="zone-marker" data-zone="14" style="top: 43%; left: 8%;">14</div>
+                <div class="zone-marker" data-zone="15" style="top: 17%; left: 80%;">15</div>
+                <div class="zone-marker" data-zone="16" style="top: 68.5%; left: 36.5%;">16</div>
+                <div class="zone-marker" data-zone="17" style="top: 80%; left: 78%;">17</div>
+                <div class="zone-marker" data-zone="18" style="top: 18%; left: 20%;">18</div>
+                <div class="zone-marker" data-zone="19" style="top: 30%; left: 82%;">19</div>
+                <div class="zone-marker" data-zone="20" style="top: 50%; left: 50%;">20</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hunts List Page -->
+    <div id="hunts-page" class="page">
+        <div class="page-header">
+            <h1>Active Hunts</h1>
+            <p class="subtitle">Your current shiny hunts</p>
+        </div>
+        <div id="hunts-list" class="hunts-list">
+            <p class="empty-state">No active hunts. Select a zone from the map!</p>
+        </div>
+    </div>
+
+    <!-- Active Hunt Screen (opens when hunt is active) -->
+    <div id="hunt-screen" class="page">
+        <div class="hunt-header">
+            <button class="back-btn" id="back-to-hunts">← Back</button>
+            <h2 id="hunt-pokemon-title"></h2>
+        </div>
+        
+        <div class="hunt-content">
+            <!-- Pokemon Image -->
+            <div class="pokemon-display">
+                <img id="hunt-pokemon-img" src="" alt="" class="hunt-pokemon-image">
+            </div>
+
+            <!-- Encounter Counter -->
+            <div class="encounter-display">
+                <div class="encounter-count" id="encounter-count">0</div>
+            </div>
+
+            <!-- Counter Buttons -->
+            <div class="counter-controls">
+                <button class="counter-btn minus" id="decrement-btn">−</button>
+                <button class="counter-btn plus" id="increment-btn">+</button>
+            </div>
+
+            <!-- Increment Value Control -->
+            <div class="increment-control">
+                <label for="increment-value">Increment by:</label>
+                <input type="number" id="increment-value" min="1" max="999" value="1">
+            </div>
+
+            <!-- Hunt Info -->
+            <div class="hunt-info-box">
+                <div class="info-item">
+                    <span class="info-label">Start</span>
+                    <span class="info-value" id="hunt-start-time"></span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Probability</span>
+                    <span class="info-value" id="hunt-odds"></span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">B(n,p)</span>
+                    <span class="info-value" id="hunt-probability">0.00%</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Until 90%</span>
+                    <span class="info-value" id="until-90">-</span>
+                </div>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="hunt-actions">
+                <button class="btn-found" id="found-shiny-btn">✨ Found Shiny!</button>
+                <button class="btn-phase" id="phase-btn">🌟 Phase</button>
+                <button class="btn-end" id="end-hunt-btn">End Hunt</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pokédex Page -->
+    <div id="pokedex-page" class="page">
+        <div class="page-header">
+            <h1>Shiny Pokédex</h1>
+            <p class="subtitle"><span id="caught-count">0</span> / 230 caught</p>
+        </div>
+        <div class="search-bar">
+            <input type="text" id="dex-search" placeholder="Search Pokémon...">
+        </div>
+        <div id="pokedex-grid" class="pokedex-grid">
+            <!-- Generated by JS -->
+        </div>
+    </div>
+
+    <!-- Settings Page -->
+    <div id="settings-page" class="page">
+        <div class="page-header">
+            <h1>Settings</h1>
+        </div>
+        <div class="settings-container">
+            <div class="setting-item">
+                <button id="export-data" class="btn-secondary">Export Data</button>
+                <p class="setting-description">Download your tracker data</p>
+            </div>
+            <div class="setting-item">
+                <button id="import-data" class="btn-secondary">Import Data</button>
+                <input type="file" id="import-file" accept=".json" style="display: none;">
+                <p class="setting-description">Upload saved data</p>
+            </div>
+            <div class="setting-item danger-zone">
+                <button id="reset-data" class="btn-danger">Reset All Data</button>
+                <p class="setting-description">⚠️ Deletes all hunts and catches!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Zone Pokemon Selection Modal -->
+    <div id="zone-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Wild Zone <span id="zone-number"></span></h2>
+                <button class="close-btn" id="close-zone-modal">×</button>
+            </div>
+            <div class="modal-body">
+                <p class="modal-subtitle">Select a Pokémon to hunt:</p>
+                <div id="pokemon-list" class="pokemon-list">
+                    <!-- Generated by JS -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Hunt Setup Modal -->
+    <div id="setup-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Start Hunt</h2>
+            </div>
+            <div class="modal-body">
+                <div class="setup-summary">
+                    <p>You are hunting <strong id="setup-pokemon"></strong> in Zone <strong id="setup-zone"></strong>!</p>
+                </div>
+
+                <div class="setup-form">
+                    <div class="form-group">
+                        <label>Do you have the Shiny Charm?</label>
+                        <div class="radio-group">
+                            <label>
+                                <input type="radio" name="shiny-charm" value="yes"> Yes
+                            </label>
+                            <label>
+                                <input type="radio" name="shiny-charm" value="no" checked> No
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="hunting-method">Hunting Method</label>
+                        <select id="hunting-method">
+                            <option value="Fast Travel">Fast Travel</option>
+                            <option value="Bench Reset">Bench Reset</option>
+                            <option value="Door Method">Door Method</option>
+                            <option value="Despawn Running">Despawn Running</option>
+                            <option value="Random Encounter">Random Encounter</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="btn-primary" id="confirm-hunt-btn">Start Hunting!</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Catch Modal -->
+    <div id="catch-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="catch-title">Caught Shiny!</h2>
+            </div>
+            <div class="modal-body">
+                <p class="catch-pokemon-name" id="catch-pokemon-name"></p>
+                
+                <div class="catch-form">
+                    <div class="form-group">
+                        <label>Gender:</label>
+                        <div class="radio-group">
+                            <label><input type="radio" name="gender" value="male"> ♂ Male</label>
+                            <label><input type="radio" name="gender" value="female"> ♀ Female</label>
+                            <label><input type="radio" name="gender" value="genderless" checked> Genderless</label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="catch-level">Level Caught:</label>
+                        <input type="number" id="catch-level" min="1" max="100" value="1">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" id="is-alpha"> Alpha Pokémon
+                        </label>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="catch-notes">Notes (optional):</label>
+                        <textarea id="catch-notes" rows="3" placeholder="Any special details..."></textarea>
+                    </div>
+                </div>
+
+                <div class="modal-actions">
+                    <button class="btn-success" id="save-catch-btn">Save to Pokédex</button>
+                    <button class="btn-secondary" id="cancel-catch-btn">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Pokédex Detail Modal -->
+    <div id="dex-detail-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="dex-detail-name"></h2>
+                <button class="close-btn" id="close-dex-modal">×</button>
+            </div>
+            <div class="modal-body" id="dex-detail-content">
+                <!-- Generated by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Continue Hunt Modal -->
+    <div id="continue-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Great catch!</h2>
+            </div>
+            <div class="modal-body">
+                <p style="text-align: center; margin-bottom: 20px;">
+                    Do you want to keep hunting <strong id="continue-pokemon"></strong>?
+                </p>
+                <div class="modal-actions">
+                    <button class="btn-primary" id="continue-yes-btn">Yes, Continue</button>
+                    <button class="btn-secondary" id="continue-no-btn">No, End Hunt</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
