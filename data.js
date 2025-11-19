@@ -80,11 +80,8 @@ const ZONE_DATA = {
         name: "Wild Zone 20",
         pokemon: ["Malamar", "Dragalge", "Charmander", "Tepig", "Lucario", "Hippowdon", "Squirtle", "Totodile", "Bulbasaur", "Roserade", "Gardevoir", "Chikorita", "Aggron", "Scrafty", "Garbodor"]
     }
-};
-
-// Zone data with Pokemon spawns - Complete accurate data
-const BENCH_DATA = {
-    1: {
+//benches
+    1001: {
         name: "Bench 1",
         pokemon: ["Fennekin", "Bagon", "Salamence", "Swablu", "Altaria", "Noivern", "Noibat", "Weedle", "Pidgey", "Trubbish"]
     }
