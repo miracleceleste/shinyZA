@@ -82,6 +82,14 @@ const ZONE_DATA = {
     }
 };
 
+// Zone data with Pokemon spawns - Complete accurate data
+const BENCH_DATA = {
+    1: {
+        name: "Bench 1",
+        pokemon: ["Fennekin", "Bagon", "Salamence", "Swablu", "Altaria", "Noivern", "Noibat", "Weedle", "Pidgey", "Trubbish"]
+    }
+};
+
 // Complete Pokedex data - All 230 Pokemon in Legends Z-A (Lumiose Dex order)
 const POKEDEX_DATA = {
     1: "Chikorita", 2: "Bayleef", 3: "Meganium",
